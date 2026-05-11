@@ -1,0 +1,30 @@
+# ── Secrets ──────────────────────────────────────────────────
+.env# Firebase service account and client config files
+*firebase-adminsdk*.json
+google-services.json
+# ── Build outputs ─────────────────────────────────────────────
+build/
+target/
+out/
+*.jar
+*.war
+*.class
+
+# ── Gradle ────────────────────────────────────────────────────
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# ── IDE ───────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
