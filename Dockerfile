@@ -15,7 +15,7 @@ COPY . .
 RUN chmod +x gradlew && ./gradlew bootJar -x test
 
 # Create final image with just the JAR
-FROM openjdk:21-slim
+FROM openjdk:21
 WORKDIR /app
 
 # Copy the built JAR from builder stage
