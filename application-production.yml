@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:8443}
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: core-sync-service
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/coresync}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:Auca}
+    driver-class-name: org.postgresql.Driver
+  security:
+    jwt:
+      secret: ${JWT_SECRET}
+      expiration: ${JWT_EXPIRATION:86400000}
+
+openai:
+  api-key: ${OPENAI_API_KEY}
+  
+logging:
+  level:
+    root: INFO
+    com.example.coresyncservice: DEBUG

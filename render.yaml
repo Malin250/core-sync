@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: core-sync-service
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: OPENAI_API_KEY
+        scope: run
+      - key: PORT
+        value: "8443"
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
