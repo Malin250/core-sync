@@ -3,13 +3,13 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy gradle files
-COPY gradlew .
-COPY gradle gradle
-COPY build.gradle .
-COPY settings.gradle .
+COPY core-sync-service/gradlew .
+COPY core-sync-service/gradle gradle
+COPY core-sync-service/build.gradle .
+COPY core-sync-service/settings.gradle .
 
-# Copy source code
-COPY . .
+# Don't forget to update the path for your source code too!
+COPY core-sync-service/src src
 
 # Build the application
 RUN chmod +x gradlew && ./gradlew bootJar -x test
