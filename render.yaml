@@ -11,3 +11,11 @@ services:
         value: "8443"
       - key: SPRING_PROFILES_ACTIVE
         value: production
+        - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: FIREBASE_STORAGE_BUCKET
+        sync: false
